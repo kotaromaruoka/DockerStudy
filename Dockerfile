@@ -1,9 +1,5 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
-RUN touch 1.txt
-WORKDIR /app/my_dir
-RUN touch 2.txt
-WORKDIR ..
-RUN touch 3.txt
+RUN apt update && apt install -y iputils-ping curl
 
 CMD ["bash"]
